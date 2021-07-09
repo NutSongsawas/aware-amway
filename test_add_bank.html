@@ -1,0 +1,412 @@
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bank</title>
+
+    <!--jQuery UI Signature-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css"
+        rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+    <link type="text/css" href="css/jquery.signature.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.signature.js"></script>
+    <!--jQuery UI Signature End-->
+
+</head>
+<style style type="text/css">
+    body {
+        min-height: 100%;
+        color: #2c2c2c;
+        font-family: kanit;
+        /*font-family: Sukhumvit Tadmai, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;*/
+        line-height: 1.5;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .add-bank-content-title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+
+    .add-bank-content-description {
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+
+    .checkout-box-upload-area {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .checkout-box-upload-label-text {}
+
+    .checkout-box-upload-label.full-width {
+        width: 100%;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border: 0.125rem dashed #9EA0A3;
+        border-radius: 10px
+    }
+
+    .upload-example {
+        display: flex;
+        align-items: center;
+        padding: 0.25rem;
+        background-color: #FAFAFA;
+    }
+
+    .upload-example-image {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .upload-example-text {
+        margin-left: 0.75rem;
+        font-size: 0.813rem;
+        font-weight: 500;
+        line-height: 1.313rem;
+        text-decoration: underline;
+    }
+
+    @media (min-width: 1024px) {
+        .add-bank-content-description {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .add-bank {
+            max-width: 36.25rem;
+            margin: 2rem auto 0;
+        }
+    }
+
+    .kbw-signature {
+        border-radius: 10px;
+        border:solid 2px #9EA0A3;
+    }
+
+    canvas {
+        width: 600px !;
+        height: 300px !;
+    }
+
+    @media only screen and (max-width: 600px) {
+        canvas {
+            width: 100%;
+            height: 150px;
+        }
+    }
+
+    /*test*/
+    #myImg,
+    #myImg2 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 10%;
+    }
+
+    #myImg:hover,
+    #myImg2:hover {
+        opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    .modal,
+    .modal2 {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content,
+    .modal-content2 {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #caption,
+    #caption2 {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content,
+    .modal-content2,
+    #caption,
+    #caption2 {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close,
+    .close2 {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close2:hover,
+    .close:focus,
+    .close2:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px) {
+        .modal-content {
+            width: 100%;
+        }
+
+        .modal-content2 {
+            width: 100%;
+        }
+    }
+</style>
+
+
+
+<body>
+
+
+    <div class="container">
+        <div class="add-bank">
+            <div class="row">
+                <div class="col-12">
+                    <div class="add-bank-content-title">
+                        ข้อมูลส่วนตัว
+                    </div>
+                    <div class="add-bank-content-description">
+                        สำหรับผู้สมัครอายุต่ำกว่า 20 ปี
+                    </div>
+
+                    <!--Copy of ID card-->
+                    <div class="checkout-box-label-input mt-3">
+                        สำเนาบัตรประชาชนของผู้ปกครอง
+                    </div>
+                    <div class="checkout-box-upload-area" id="checkout-box-upload-bank">
+                        <input style="display: none ;" type="file" class="checkout-box-upload-input"
+                            id="checkout-box-upload-input-bank">
+                        <label for="checkout-box-upload-input-bank" class="checkout-box-upload-label full-width">
+                            <div class="checkout-box-upload-label-icon-area">
+                                <div class="checkout-box-upload-label-icon"></div>
+                            </div>
+                            <div class="checkout-box-upload-label-text">
+                                อัพโหลดรูปภาพ
+                            </div>
+                        </label>
+                    </div>
+                    <div class="upload-file-area hidden" id="upload-file-bank-area">
+                        <div class="upload-file-image-area">
+                            <img src="" id="checkout-box-upload-img-bank">
+                        </div>
+                        <div class="upload-file-detail">
+                            <div class="upload-file-title" id="upload-file-bank-title"></div>
+                            <div class="upload-file-delete" id="upload-file-bank-delete"></div>
+                        </div>
+                    </div>
+                    <div class="upload-example bank-detail-image">
+                        <img id="myImg" src="../../image/example-copy.jpg" alt="Snow">
+                        <div class="upload-example-text">
+                            <a>คลิกดูรูปภาพตัวอย่างสำเนาหน้าสมุดบัญชี</a>
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <span class="close">x</span>
+                            <img class="modal-content" id="img0">
+                            <div id="caption"></div>
+                        </div>
+
+
+                    </div>
+
+                    <!--Copy of house registration-->
+                    <div class="checkout-box-label-input mt-3">
+                        สำเนาทะเบียนบ้านผู้สมัครที่มีชื่อผู้ปกครอง
+                    </div>
+                    <div class="checkout-box-upload-area" id="checkout-box-upload-bank">
+                        <!--<input type="file" class="checkout-box-upload-input" id="checkout-box-upload-input-bank">-->
+                        <label for="checkout-box-upload-input-bank" class="checkout-box-upload-label full-width">
+                            <div class="checkout-box-upload-label-icon-area">
+                                <div class="checkout-box-upload-label-icon"></div>
+                            </div>
+                            <div class="checkout-box-upload-label-text">
+                                อัพโหลดรูปภาพ
+                            </div>
+                        </label>
+                    </div>
+                    <div class="upload-file-area hidden" id="upload-file-bank-area">
+                        <div class="upload-file-image-area">
+                            <img src="" id="checkout-box-upload-img-bank">
+                        </div>
+                        <div class="upload-file-detail">
+                            <div class="upload-file-title" id="upload-file-bank-title"></div>
+                            <div class="upload-file-delete" id="upload-file-bank-delete"></div>
+                        </div>
+                    </div>
+                    <div class="upload-example bank-detail-image">
+                        <img id="myImg2" src="../../image/example-copy2.png" alt="Snow">
+
+                        <div class="upload-example-text">
+                            <a>คลิกดูรูปภาพตัวอย่างสำเนาหน้าสมุดบัญชี</a>
+                        </div>
+                        <!-- The Modal -->
+                        <div id="myModal2" class="modal2">
+                            <span class="close2">x</span>
+                            <img class="modal-content2" id="img2">
+                            <div id="caption2"></div>
+                        </div>
+                    </div>
+
+                    <!--Signature-->
+                    <div class="checkout-box-label-input mt-3">
+                        ลายเซ็นต์ผู้ปกครอง
+                    </div>
+                    <div id="defaultSignature" class="kbw-signature">
+                        <canvas>Your browser doesn't support signing</canvas>
+                    </div>
+                    <p style="clear: both;"><span class="demoLabel">&nbsp;</span>
+                        <button type="button" id="removeSignature">Remove</button>
+                        <button type="button" id="disableSignature">Disable</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#defaultSignature').signature();
+
+        $('#removeSignature').click(function () {
+            var destroy = $(this).text() === 'Remove';
+            $(this).text(destroy ? 'Re-attach' : 'Remove');
+            $('#defaultSignature').signature(destroy ? 'destroy' : {});
+        });
+
+        $('#disableSignature').click(function () {
+            var enable = $(this).text() === 'Enable';
+            $(this).text(enable ? 'Disable' : 'Enable');
+            $('#defaultSignature').signature(enable ? 'enable' : 'disable');
+        });
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var img2 = document.getElementById("myImg2");
+        var modalImg = document.getElementById("img0");
+        var modalImg2 = document.getElementById("img2");
+        var captionText = document.getElementById("caption");
+        var captionText2 = document.getElementById("caption2");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        img2.onclick = function () {
+            modal2.style.display = "block";
+            modalImg2.src = this.src;
+            captionText2.innerHTML = this.alt;
+        }
+        // Get the <span> element that closes the modal
+        var span1 = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementsByClassName("close2")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span1.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        span2.onclick = function () {
+            modal2.style.display = "none";
+        }
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,800 @@
+<div class="content">
+    <style media="all" type="text/css">
+        #flashSale {
+            /* background: #53E2F9; */
+        }
+
+        .breadcrumb-section {
+            display: none;
+        }
+
+        #our-company.container-fluid,
+        .container-fluid {
+            padding: 0 !important;
+            margin: 0 auto;
+        }
+
+        .main-container {
+            max-width: 100vw;
+        }
+
+        .main-wrapper-content {
+            max-width: 1156px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .main-wrapper-content .row {
+            margin: 0 auto;
+        }
+
+        #flashSale .rowม .flashSale-wrapper .row {
+            margin: 0 !important;
+        }
+
+        body,
+        a,
+        button {
+            font-family: Sukhumvit, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
+        }
+
+        #flashSale button:disabled,
+        #flashSale button[disabled] {
+            /*border: 1px solid #999999;
+                    background-color: #cccccc;
+                    color: #666666;*/
+            cursor: initial !important;
+        }
+
+        h1.product-list-page-title.mb25 {
+            display: none;
+        }
+
+        .breadcrumb-section .breadcrumb {
+            padding-left: 15px;
+        }
+
+        h1.product-list-page-title.mb25 {
+            display: none;
+        }
+
+        .breadcrumb-section .breadcrumb {
+            padding-left: 15px;
+        }
+
+        #amway-global-accordion {
+            width: 100%;
+            margin: 0;
+        }
+
+        #amway-global-accordion {
+            width: 100%;
+            margin: 0 auto !important;
+            max-width: 100%;
+        }
+
+        #our-company .facility-hq-list {
+            width: 100% !important;
+            margin: 0 auto;
+            clear: both;
+            display: block;
+        }
+
+        .modal.in .modal-dialog {
+            width: 70%;
+            height: 100%;
+            max-height: 60vh;
+            background: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 10%;
+            bottom: 0;
+            overflow: hidden;
+            overflow-y: auto;
+            transform: translateY(10%);
+            /*  transition: 0.3s ease;*/
+            z-index: 10000 !important;
+        }
+
+        .flashsale-text,
+        #flashSale a {
+            color: #000;
+        }
+
+        .modal-content {
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        .banner {
+            width: 100%;
+            text-align: center;
+        }
+
+        .flashSale-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1156px;
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .corner-pic-size {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+        }
+
+        #page1 {
+            background: #53e2f954;
+            margin-bottom: 10px;
+        }
+
+        #page2 {
+            background: #fec20361;
+            margin-bottom: 10px;
+        }
+
+        #page3 {
+            background: #65DAC5;
+            margin-bottom: 10px;
+        }
+
+        .flashSale-wrapper .row,
+        #flashSale .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flashSale-wrapper .item button {
+            border: 0;
+            background: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flashSale-wrapper .item button:active,
+        .flashSale-wrapper .item button:focus {
+            border: 0;
+        }
+
+        div#countdown {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            width: 100%;
+            max-width: 240px;
+            justify-content: space-between;
+            margin: 15px;
+        }
+
+        div#countdown .date-block {
+            color: #000000;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 16px;
+            line-height: 0;
+            font-weight: 600;
+        }
+
+        .item-sp {
+            width: 100%;
+            height: auto;
+            padding: 8px;
+        }
+
+        #countdown small#text-countdown {
+            font-size: smaller;
+            width: 100%;
+            text-align: center;
+        }
+
+        #day,
+        #hr,
+        #min,
+        #secv {
+            background-color: #c1c1c1;
+            color: #000000;
+            padding: 5px 5px 5px 5px;
+            margin: 0px 0px 10px 0px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            height: 35px;
+            width: 35px;
+            font-size: 16px;
+            line-height: 0;
+            font-weight: 600;
+        }
+
+        .container-corner-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container-corner-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .active .switch-1 {
+            background-color: #FD90AD !important;
+        }
+
+        .active .switch-2 {
+            background-color: #FEC79E !important;
+        }
+
+        .active .switch-3 {
+            background-color: #65DAC5 !important;
+        }
+
+        .switch-1,
+        .switch-2,
+        .switch-3 {
+            cursor: pointer;
+            background: #ffffff;
+            margin: 0 !important;
+        }
+
+        .p-1-start img,
+        .p-2-start img,
+        .p-3-start img,
+        .p-4-start img,
+        .p-5-start img,
+        .p-6-start img,
+        .p-1-end img,
+        .p-2-end img,
+        .p-3-end img,
+        .p-4-end img,
+        .p-5-end img,
+        .p-6-end img {
+            opacity: 0;
+        }
+
+        .p-1-start,
+        .p-2-start,
+        .p-3-start,
+        .p-4-start,
+        .p-5-start,
+        .p-6-start,
+        .p-1-end,
+        .p-2-end,
+        .p-3-end,
+        .p-4-end,
+        .p-5-end,
+        .p-6-end {
+            background-size: contain !important;
+        }
+
+        .p-1-start {
+            background: url(https://media.amway.id/sys-master/images/hba/h41/9078413426718/prm-4-4-p1-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-2-start {
+            background: url(https://media.amway.id/sys-master/images/h93/h4e/9078400450590/prm-4-4-p2-s.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-3-start {
+            background: url(https://media.amway.id/sys-master/images/he7/h28/9078401859614/prm-4-4-p3-s.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-4-start {
+            background: url(https://media.amway.id/sys-master/images/h9b/hee/9078403432478/prm-4-4-p4-s.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-5-start {
+            background: url(https://media.amway.id/sys-master/images/hc4/h4b/9078405005342/prm-4-4-p5-s.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-6-start {
+            background: url(https://media.amway.id/sys-master/images/hc4/h48/9080032985118/prm-4-4-p6-s.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-1-end {
+            background: url(https://media.amway.id/sys-master/images/hba/h41/9078413426718/prm-4-4-p1-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-2-end {
+            background: url(https://media.amway.id/sys-master/images/h6d/h2f/9078414671902/prm-4-4-p2-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-3-end {
+            background: url(https://media.amway.id/sys-master/images/hb6/hf4/9078416211998/prm-4-4-p3-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-4-end {
+            background: url(https://media.amway.id/sys-master/images/h6b/h3a/9078418178078/prm-4-4-p4-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-5-end {
+            background: url(https://media.amway.id/sys-master/images/h94/hb2/9078420340766/prm-4-4-p5-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        .p-6-end {
+            background: url(https://media.amway.id/sys-master/images/h69/hfb/9080034295838/prm-4-4-p6-e.png) no-repeat !important;
+            background-size: contain !important;
+        }
+
+        @media (min-width: 992px) {
+            .countdown-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .imageblock {
+                max-width: 475px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                padding: 0 !important;
+            }
+
+            .right-content-countdown {
+                max-width: 370px;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: center;
+            }
+
+            .desktop {
+                display: block;
+            }
+
+            .mobile {
+                display: none;
+            }
+
+            .main-text-promotion {
+                /*  padding-top: 3%; */
+                padding-bottom: 3%;
+                max-width: 1230px;
+            }
+
+            .imgpromotion {
+                padding: 1.3%;
+            }
+
+            .flashSale-wrapper .item button {
+                border: 0;
+                background: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+        }
+
+        @media(max-width: 991px) {
+            div#countdown {
+                display: flex;
+                align-items: center;
+                font-size: 16px;
+                width: 100%;
+                max-width: 55%;
+                justify-content: center;
+                margin: 15px 0 15px;
+            }
+
+            .text-block {
+                text-align: center;
+                margin-bottom: -.85rem;
+            }
+
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .right-content-countdown {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .corner-pic-size {
+                max-width: 150px;
+                width: 100%;
+                height: auto;
+            }
+
+            .main-text-promotion {
+                padding-top: 3%;
+                padding-bottom: 3%;
+                max-width: 1230px;
+            }
+
+            .col-md-6.col-sm-12.col-xs-12.item {  
+                width: 100%;
+                padding: 0;
+            }
+
+            .flashSale-wrapper .item button {
+                border: 0;
+                background: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+        }
+
+        @media(max-width:450px) {
+            .imgpromotion.col-md-6.col-xs-12.col-sm-12 {
+                padding: 0;
+                margin: 0 -3px;
+            }
+
+            .item-sp {
+                width: 101%;
+                height: auto;
+                padding: 8px;
+            }
+
+            .modal.in .modal-dialog {
+                width: 80%;
+                z-index: 10000 !important;
+            }
+        }
+
+        @media(max-width:350px) {
+            .imageblock.col-sm-9.col-xs-9 {
+                padding: 0;
+            }
+
+            .col-md-6.col-sm-12.col-xs-12.item,
+            .col-xs-12.col-sm-12.countdown-row {
+                width: 100%;
+                padding: 0px;
+            }
+
+            .flashSale-wrapper .item button {
+                border: 0;
+                background: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+            }
+
+            .corner-pic-size {
+                max-width: 80px;
+                width: 100%;
+                height: auto;
+            }
+
+            .main-text-promotion {
+                padding-top: 5%;
+                padding-bottom: 3%;
+                max-width: 200px;
+            }
+
+            .modal.in .modal-dialog {
+                width: 90%;
+                z-index: 10000 !important;
+            }
+        }
+    </style>
+    <div class="content main-wrapper-content" id="flashSale">
+        <div class="banner" style="width:100%;position:relative;background: #fff;"><img alt=""
+                class="main-text-promotion"
+                src="https://media.amway.id/sys-master/images/h6d/h99/9078315384862/prm-4-4-fs-banner.png"
+                style="opacity: 1;width: 100%;" /></div>
+
+        <div class="flashSale-wrapper">
+            <div class="row">
+                <div class="tab-content ">
+                    <div class="col-xs-12 col-sm-12 col-md-12 tab-pane active" id="page1" role="tabpanel">
+                        <div class="col-xs-12 col-sm-12 countdown-row">
+                            <div class="imageblock col-sm-9 col-xs-9"><img alt="flashDeal-logo" class="flashsale-logo"
+                                    src="https://media.amway.id/sys-master/images/ha7/h2f/9078308241438/prm-4-4-time-10-22.png"
+                                    style="width: 100%;" /></div>
+
+                            <div class="right-content-countdown col-sm-12 col-xs-12">
+                                <div class="text-block">
+                                    <p><span class="flashsale-text">จะจบใน</span></p>
+                                </div>
+
+                                <div id="countdown">
+                                    <div class="date-block">
+                                        <div id="day">0</div>
+                                        <small id="text-countdown">วัน</small>
+                                    </div>
+
+                                    <div class="date-block">
+                                        <div id="hr">0</div>
+                                        <small id="text-countdown">ชั่วโมง</small>
+                                    </div>
+
+                                    <div class="date-block">
+                                        <div id="min">0</div>
+                                        <small id="text-countdown">นาที</small>
+                                    </div>
+
+                                    <div class="date-block">
+                                        <div id="secv">0</div>
+                                        <small id="text-countdown">วินาที</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 item">
+                            <form action="/cart/add/new" class="add_to_cart_form" method="post"><input
+                                    class="qty js-qty-selector-input" maxlength="2" name="qty" size="1" type="hidden"
+                                    value="1" /> <input name="aliasCode" type="hidden" value="" /> <input
+                                    name="productCode" type="hidden" value="297651" /> <input name="volumeAbos"
+                                    type="hidden" value="" /> <input name="isKitProduct" type="hidden" value="false" />
+                                <input class="isChangeSelectionPopup" type="hidden" value="true" /> <input
+                                    name="isHazardous" type="hidden" value="" /> <input name="forceUpdate" type="hidden"
+                                    value="true" /><button class="p-1-end disabled"><img alt=""
+                                        src="https://media.amway.id/sys-master/images/he0/h33/9078309093406/prm-4-4-item-1-1.png"
+                                        style="width: 100%;" /></button></form>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 item">
+                            <form action="/cart/add/new" class="add_to_cart_form" method="post"><input
+                                    class="qty js-qty-selector-input" maxlength="2" name="qty" size="1" type="hidden"
+                                    value="1" /> <input name="aliasCode" type="hidden" value="" /> <input
+                                    name="productCode" type="hidden" value="306390" /> <input name="volumeAbos"
+                                    type="hidden" value="" /> <input name="isKitProduct" type="hidden" value="false" />
+                                <input class="isChangeSelectionPopup" type="hidden" value="true" /> <input
+                                    name="isHazardous" type="hidden" value="" /> <input name="forceUpdate" type="hidden"
+                                    value="true" /><button class="p-2-end disabled"><img alt=""
+                                        src="https://media.amway.id/sys-master/images/h6d/h2f/9078414671902/prm-4-4-p2-e.png"
+                                        style="width: 100%;" /></button></form>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 item">
+                            <form action="/cart/add/new" class="add_to_cart_form" method="post"><input
+                                    class="qty js-qty-selector-input" maxlength="2" name="qty" size="1" type="hidden"
+                                    value="1" /> <input name="aliasCode" type="hidden" value="" /> <input
+                                    name="productCode" type="hidden" value="297653" /> <input name="volumeAbos"
+                                    type="hidden" value="" /> <input name="isKitProduct" type="hidden" value="false" />
+                                <input class="isChangeSelectionPopup" type="hidden" value="true" /> <input
+                                    name="isHazardous" type="hidden" value="" /> <input name="forceUpdate" type="hidden"
+                                    value="true" /><button class="p-3-end disabled"><img alt=""
+                                        src="https://media.amway.id/sys-master/images/hb6/hf4/9078416211998/prm-4-4-p3-e.png"
+                                        style="width: 100%;" /></button></form>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 item">
+                            <form action="/cart/add/new" class="add_to_cart_form" method="post"><input
+                                    class="qty js-qty-selector-input" maxlength="2" name="qty" size="1" type="hidden"
+                                    value="1" /> <input name="aliasCode" type="hidden" value="" /> <input
+                                    name="productCode" type="hidden" value="297655" /> <input name="volumeAbos"
+                                    type="hidden" value="" /> <input name="isKitProduct" type="hidden" value="false" />
+                                <input class="isChangeSelectionPopup" type="hidden" value="true" /> <input
+                                    name="isHazardous" type="hidden" value="" /> <input name="forceUpdate" type="hidden"
+                                    value="true" /><button class="p-4-end disabled"><img alt=""
+                                        src="https://media.amway.id/sys-master/images/h6b/h3a/9078418178078/prm-4-4-p4-e.png"
+                                        style="width: 100%;" /></button></form>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center;padding:15px;"><a
+                                data-target="#Term1" data-toggle="modal" href="#Term1">โปรดอ่านรายละเอียดเงื่อนไข ></a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12 tab-pane active" id="page2" role="tabpanel">
+                        <div class="col-xs-12 col-sm-12 countdown-row">
+                            <div class="imageblock col-sm-9 col-xs-9"><img alt="flashDeal-logo" class="flashsale-logo"
+                                    src="https://media.amway.id/sys-master/images/hf6/h23/9080028299294/prm-4-4-fd-10-22.png"
+                                    style="width: 100%;" /></div>
+
+                            <div class="right-content-countdown col-sm-12 col-xs-12"></div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 item">
+                            <form action="/cart/add/new" class="add_to_cart_form" method="post"><input
+                                    class="qty js-qty-selector-input" maxlength="2" name="qty" size="1" type="hidden"
+                                    value="1" /> <input name="aliasCode" type="hidden" value="" /> <input
+                                    name="productCode" type="hidden" value="297698" /> <input name="volumeAbos"
+                                    type="hidden" value="" /> <input name="isKitProduct" type="hidden" value="false" />
+                                <input class="isChangeSelectionPopup" type="hidden" value="true" /> <input
+                                    name="isHazardous" type="hidden" value="" /> <input name="forceUpdate" type="hidden"
+                                    value="true" /><button class="p-5-end disabled"><img alt=""
+                                        src="https://media.amway.id/sys-master/images/h94/hb2/9078420340766/prm-4-4-p5-e.png"
+                                        style="width: 100%;" /></button></form>
+                        </div>
+
+                        <div class="col-md-6 col-sm-12 col-xs-12 item">
+                            <form action="/cart/add/new" class="add_to_cart_form" method="post"><input
+                                    class="qty js-qty-selector-input" maxlength="2" name="qty" size="1" type="hidden"
+                                    value="1" /> <input name="aliasCode" type="hidden" value="" /> <input
+                                    name="productCode" type="hidden" value="297594" /> <input name="volumeAbos"
+                                    type="hidden" value="" /> <input name="isKitProduct" type="hidden" value="false" />
+                                <input class="isChangeSelectionPopup" type="hidden" value="true" /> <input
+                                    name="isHazardous" type="hidden" value="" /> <input name="forceUpdate" type="hidden"
+                                    value="true" /><button class="p-6-end disabled"><img alt=""
+                                        src="https://media.amway.id/sys-master/images/h69/hfb/9080034295838/prm-4-4-p6-e.png"
+                                        style="width: 100%;" /></button></form>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center;padding:15px;"><a
+                                data-target="#Term2" data-toggle="modal" href="#Term2">โปรดอ่านรายละเอียดเงื่อนไข ></a>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12" style="padding: 0;text-align:center;">
+                            <div
+                                style="padding: 1% 0 1% 0;margin: 1% 0 1% 0;width:100%;flex-wrap: wrap;/* margin-left: -15px; */text-align: center;display: flex;justify-content: center;/* margin-right: -15px; */margin: 0 auto;">
+                                <div class="imgpromotion col-md-6 col-xs-12 col-sm-12" style="padding: 10px;"><a
+                                        href="https://www.amway.co.th/promotion-launch"><img alt="must have item"
+                                            src="https://media.amway.id/sys-master/images/hc4/hb1/9080585453598/monthly-promotion.png"
+                                            style="width: 100%;height: auto;" /> </a></div>
+
+                                <div class="imgpromotion col-md-6 col-xs-12 col-sm-12" style="padding: 10px;"><a
+                                        href="https://www.amway.co.th/musthave"><img alt="all promotion"
+                                            src="https://media.amway.id/sys-master/images/h07/hf2/9074339446814/coupon-promotion-2021-imgpromotion-2.png"
+                                            style="width: 100%;height: auto;" /> </a></div>
+                            </div>
+                            <!-- <a href="#" data-toggle="modal" data-target="#Kbank" style="/*height: 100%;*/ display: inline-block;"> --><img
+                                src="https://media.amway.id/sys-master/images/hcc/hc5/9080412471326/AW_KTCOnlineCashBackX10%25Banner.png"
+                                style="width: 100%;padding: 15px;/* margin-left: -15px; *//* margin-right:-15px; */" />
+                            <!-- </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest compiled and minified JavaScript -->
+<script>
+    /* $('#myTabs a').click(function(e) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */
+    //window.onload = onClicklHandleInit;
+    // Set the date we're counting down to
+    var countDownDate = [
+        new Date("April 4, 2021 22:00:00").getTime()
+    ];
+
+
+    var flashSale = document.getElementById('flashSale');
+
+    var buttonDOM = document.querySelectorAll("[class='item-addtocart']");
+    var textChange = document.querySelectorAll("[id='subtext']");
+    var flashsaleText = document.querySelectorAll("[class='flashsale-text']");
+    var priceText2 = document.querySelectorAll("[class='text-fs']");
+    var priceText = document.querySelectorAll("[class='price']");
+    var banner = document.querySelectorAll(".sec");
+    var elms = document.querySelectorAll("[id='countdown']");
+
+    var proText = document.querySelectorAll(".flashsale-text");
+    var timestamps = setInterval(function () {
+        // Get Element's date and time
+
+        // Get today's date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+
+        //console.log(i);
+
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var DayElem = elms[0].querySelector("[id='day']");
+        var HrElem = elms[0].querySelector("[id='hr']");
+        var MinElem = elms[0].querySelector("[id='min']");
+        var SecElem = elms[0].querySelector("[id='secv']");
+        DayElem.innerHTML = days;
+        HrElem.innerHTML = hours;
+        MinElem.innerHTML = minutes;
+        SecElem.innerHTML = seconds;
+        if (distance <= 1000) {
+            stopTimer();
+        }
+    }, 1000)
+
+    function stopTimer() {
+        clearInterval(timestamps);
+        console.log("time's up");
+    };
+    /*  var timestamps = countDownDate.map(
+                setInterval(function() {
+                    // Get Element's date and time
+    
+                    // Get today's date and time
+                    var now = new Date().getTime();
+                    // Find the distance between now and the count down date
+                    for (var i = 0; i < countDownDate.length; i++) {
+                        //console.log(i);
+    
+                        var distance = countDownDate[i] - now;
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        var DayElem = elms[i].querySelector("[id='day']");
+                        var HrElem = elms[i].querySelector("[id='hr']");
+                        var MinElem = elms[i].querySelector("[id='min']");
+                        var SecElem = elms[i].querySelector("[id='secv']");
+                        DayElem.innerHTML = days;
+                        HrElem.innerHTML = hours;
+                        MinElem.innerHTML = minutes;
+                        SecElem.innerHTML = seconds;
+                      //elms[i].innerHTML = "<div class=\"date-block\"> " +
+                        //days + "<small id=\"text-countdown\">วัน</small></div> : <div class=\"date-block\">" +
+                          //hours + "<small id=\"text-countdown\">ชั่วโมง</small></div> : <div class=\"date-block\"> " +
+                            //minutes + "<small id=\"text-countdown\">นาที</small></div> : <div class=\"date-block\">" +
+                              //seconds + "<small id=\"text-countdown\">วินาที</small></div>"; 
+                    }
+                }, 1000)
+            ); */
+</script>
+
+<div aria-hidden="true" aria-labelledby="Term1" class="modal fade" id="Term1" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="padding: 15px;"><button aria-hidden="true" class="close" data-dismiss="modal"
+                    style="color: #c1c1c1; margin-top: -1%;" type="button">×</button>
+
+                <h4 class="modal-title" id="myModalLabel" style="color: #c1c1c1;">เงื่อนไข Flash Sale 10.00 - 22.00 น.
+                </h4>
+            </div>
+
+            <div class="modal-body"><span>• เฉพาะสั่งซื้อออนไลน์ผ่าน www.amway.co.th และบนแอปพลิเคชัน Amway Click<br />•
+                    ต้องทำการสั่งซื้อและชำระเงินในช่วงเวลาที่มีโปรโมชั่น Flash Sale เท่านั้น<br />• จำกัดสิทธิ์ 1 ชิ้น /
+                    รหัสประจำตัว<br />• ได้รับ PV / VB ตามสัดส่วน<br />• สามารถร่วมรายการส่งเสริมการขายอื่นได้ ยกเว้น
+                    Product Kits สำหรับนักธุรกิจแอมเวย์ใหม่, ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ (Bodykey Jump Start kit),
+                    ชุดอาหารเช้านิวทริไลท์ Q Plus Breakfast kit และ SOP<br />• จัดส่งฟรี
+                    เมื่อสั่งซื้อสินค้ายอดสุทธิหลังหักส่วนลดครบ 699 บาทขึ้นไป/ใบเสร็จ (ราคาสมาชิก)
+                    โดยสามารถสั่งซื้อและชำระเงินร่วมกับสินค้าอื่นได้ ถ้ายอดสุทธิหลังหักส่วนลดต่ำกว่า 699 บาท /ใบเสร็จ
+                    (ราคาสมาชิก) เสียค่าจัดส่ง 25 บาท<br />• สำหรับนักธุกิจแอมเวย์และสมาชิก ที่สั่งซื้อนิวทริไลท์
+                    คอลลาเจน (SKU297651) และเลือกจัดส่งแบบ Home Delivery รับเพิ่ม อาร์ทิสทรี Youth Xtend Cleansing Foam
+                    จำนวน 1 ซอง และอาร์ทิสทรี Youth Xtend Enriching Cream จำนวน 1 ซอง (จำกัด 5,583 ชุด)<br />•
+                    สามารถรับสินค้าได้ที่ช้อปทุกสาขา หรือเลือกจัดส่งแบบ Home Delivery<br />•
+                    ราคาด้านล่างที่แสดงยังคงเป็นราคาปกติ ราคาลดจะแสดงเมื่อ Flash Sale เริ่ม (4 เมษายน 2564 เวลา 10.00
+                    น.)</span></div>
+        </div>
+    </div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="Term2" class="modal fade" id="Term2" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div style="padding: 15px;"><button aria-hidden="true" class="close" data-dismiss="modal"
+                    style="color: #c1c1c1; margin-top: -1%;" type="button">×</button>
+
+                <h4 class="modal-title" id="myModalLabel" style="color: #c1c1c1;">เงื่อนไข Flash Deal 10.00 - 22.00 น.
+                </h4>
+            </div>
+
+            <div class="modal-body"><span>• เฉพาะสั่งซื้อออนไลน์ผ่าน www.amway.co.th และบนแอปพลิเคชัน Amway Click<br />•
+                    ต้องทำการสั่งซื้อและชำระเงินในช่วงเวลาที่มีโปรโมชั่น Flash Deal เท่านั้น (10.00 - 22.00 น.)<br />•
+                    จำกัดสิทธิ์ 1 ชิ้น / รหัสประจำตัว<br />• ได้รับ PV / VB ตามสัดส่วน<br />•
+                    สามารถร่วมรายการส่งเสริมการขายอื่นได้ ยกเว้น Product Kits สำหรับนักธุรกิจแอมเวย์ใหม่,
+                    ชุดเริ่มต้นควบคุมน้ำหนักบอดี้คีย์ (Bodykey Jump Start kit), ชุดอาหารเช้านิวทริไลท์ Q Plus Breakfast
+                    kit และ SOP<br />• ค่าจัดส่งฟรี เมื่อสั่งซื้อสินค้ายอดสุทธิหลังหักส่วนลดครบ 699 บาทขึ้นไป/ใบเสร็จ
+                    (ราคาสมาชิก) โดยสามารถสั่งซื้อและชำระเงินร่วมกับสินค้าอื่นได้ หากยอดสุทธิต่ำกว่า 699 บาท
+                    จะเสียค่าจัดส่ง 25 บาท<br />• สามารถรับสินค้าได้ที่ช้อปทุกสาขา หรือเลือกจัดส่งแบบ Home Delivery
+                </span></div>
+        </div>
+    </div>
+</div>
